@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.hhz.tms.service.account.ShiroService;
 
 /**
+ * 初始化资源控制
  * @author huangjian
  * 
  */
