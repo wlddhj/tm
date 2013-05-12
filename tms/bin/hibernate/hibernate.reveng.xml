@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+<hibernate-reverse-engineering>
+	<table-filter match-name="acct_group"/>
+	<table-filter match-name="acct_group_permission"/>
+	<table-filter match-name="acct_user"/>
+	<table-filter match-name="acct_user_group"/>
+</hibernate-reverse-engineering>

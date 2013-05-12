@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+	default-lazy-init="true">
+
+	<description>Shiro-cas安全配置</description>
+
+	<!-- Shiro's main business-tier object for web-enabled applications -->
+	<bean id="casSubjectFactory" class="org.apache.shiro.cas.CasSubjectFactory">
+	</bean>
+
+	<!-- 項目自定义的Realm, 所有accountService依赖的dao都需要用depends-on声明 -->
+	<bean id="casRealm" class="org.apache.shiro.cas.CasRealm">
+		<property name="casServerUrlPrefix" value="http://localhost:8080/tms/login"/>
+		<property name="casService" value="http://localhost:8080/tms/shiro-cas"/>
+		<property name="defaultRoles" value="user"/>
+	</bean>
+	<!-- Shiro casFilter -->
+	<bean id="casFilter" class="org.apache.shiro.cas.CasFilter">
+		<property name="failureUrl" value="/WEB-INF/views/error/500.jsp" />
+	</bean>
+</beans>

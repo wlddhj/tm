@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hibernate tools" default="generate.ddl">
+    <property environment="osenv" />
+	<property name="hibernate-tools.path" value="." />
+	<property name="ID" value="@Id" />
+	<property name="UUID" value="@Id&#xD;&#xA;    @GeneratedValue(generator = &quot;system-uuid&quot;)&#xD;&#xA;    @GenericGenerator(name = &quot;system-uuid&quot;, strategy = &quot;uuid.hex&quot;)" />
+	<property name="RECORD_VERSION" value="public Long getRecordVersion() {" />
+	<property name="VERSION" value="@Version &#xD;&#xA;    public Long getRecordVersion() {" />
+	<property name="IDimport" value="import javax.persistence.Id;" />
+	<property name="newImport" value="import javax.persistence.Id;&#xD;&#xA;import javax.persistence.GeneratedValue;&#xD;&#xA;import javax.persistence.Version;&#xD;&#xA;import org.hibernate.annotations.GenericGenerator;&#xD;&#xA;import org.hibernate.annotations.BatchSize;" />
+	<property name="defautl_package" value="default package" />
+	<property name="hibernate-tools.path" value="." />
+	<property name="date" value="@Temporal(TemporalType.DATE)" />
+	<property name="dateTime" value="@Temporal(TemporalType.TIMESTAMP)" />
+	<property file="build.properties" />
+	<path id="toolslib">
+		<path location="${osenv.M2_REPO}/org/hibernate/hibernate-tools/3.2.3.GA/hibernate-tools-3.2.3.GA.jar" />
+		<path location="${osenv.M2_REPO}/org/hibernate/jtidy/r8-21122004/jtidy-r8-21122004.jar" />
+
+		<path location="${osenv.M2_REPO}/org/freemarker/freemarker/2.3.14/freemarker-2.3.14.jar" />
+		<path location="${osenv.M2_REPO}/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final.jar" />
+		<path location="${osenv.M2_REPO}/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final.jar" />
+		<path location="${osenv.M2_REPO}/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar" />
+		<path location="${osenv.M2_REPO}/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+		<path location="${osenv.M2_REPO}/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" />
+		<path location="${osenv.M2_REPO}/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar" />
+		<path location="${osenv.M2_REPO}/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" />
+		<path location="${osenv.M2_REPO}/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+		<path location="${osenv.M2_REPO}/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar" />
+		<path location="${osenv.M2_REPO}/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar" />
+		<path location="${osenv.M2_REPO}/log4j/log4j/1.2.17/log4j-1.2.17.jar" />
+		<!--jdbc driver-->
+		<path location="${osenv.M2_REPO}/mysql\mysql-connector-java/5.1.10/mysql-connector-java-5.1.10.jar" />
+	</path>
+
+	<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="toolslib"/>
+	<target name="generate.pojo">
+		<hibernatetool destdir="generated">
+			<classpath>
+				<path location="../../target/classes" />
+			</classpath>
+
+			<jdbcconfiguration configurationfile="hibernate.cfg.xml" namingstrategy="org.hibernate.cfg.ImprovedNamingStrategy" revengfile="hibernate.reveng.xml" detectmanytomany="true" />
+			<hbm2java jdk5="true" ejb3="true" />
+		</hibernatetool>
+		<replace dir="generated" token="${ID}" value="${UUID}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${RECORD_VERSION}" value="${VERSION}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${defautl_package}" value="${package_pix}${new_package}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${IDimport}" value="${newImport}" summary="true" encoding="UTF-8"/>
+		
+		<replace dir="generated" token="${set_flg}" value="${list_flg}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${set_flg2}" value="${list_flg2}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${hashSet_flg}" value="${arrayList_flg}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${set_import}" value="${list_import}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${hashSet_import}" value="${arrayList_import}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${arrayList_0}" value="${arrayList_}" summary="true" encoding="UTF-8"/>
+		<!--<replace dir="generated" token="${FetchType_LAZY}" value="${FetchType_EAGER}" summary="true" encoding="UTF-8"/>-->
+		<replace dir="generated" token="${many_flg}" value="${many_flg_batch}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${date}" value="${dateTime}" summary="true" encoding="UTF-8"/>
+		<replace dir="generated" token="${cascade}" value="" summary="true" encoding="UTF-8"/>
+		
+	</target>
+	<target name="generate.code">
+		<hibernatetool destdir="generated" templatepath="${hibernate-tools.path}/template/">
+			<classpath>
+				<path location="../../target/classes" />
+			</classpath>
+
+			<annotationconfiguration configurationfile="hibernate.cfg.xml" />
+
+			<hbmtemplate templateprefix="pojo/" template="dao.ftl" filepattern="{class-name}Dao.java" />
+			<hbmtemplate templateprefix="pojo/" template="manager.ftl" filepattern="{class-name}Manager.java" />
+			<!--
+			<hbmtemplate templateprefix="pojo/" template="daoTest.ftl" filepattern="{class-name}DaoTest.java" /> 
+			<hbmtemplate templateprefix="pojo/" template="managerTest.ftl" filepattern="{class-name}ManagerTest.java" />
+			 -->
+			
+		</hibernatetool>
+	</target>
+
+	<target name="generate.ddl">
+		<hibernatetool destdir="generated">
+			<classpath>
+				<path location="../../target/classes" />
+			</classpath>
+
+			<annotationconfiguration configurationfile="hibernate.cfg.xml" namingstrategy="org.hibernate.cfg.ImprovedNamingStrategy" />
+
+			<hbm2ddl export="false" update="false" drop="false" create="false" outputfilename="schema.sql" delimiter=";" format="true" haltonerror="false" />
+		</hibernatetool>
+	</target>
+</project>

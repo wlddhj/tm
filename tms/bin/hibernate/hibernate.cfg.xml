@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL dialect for generate.pojo and ddl-->
+		<!-- 
+		<property name="dialect">org.hibernate.dialect.H2Dialect</property>
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+		-->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+		<!-- jdbc properties for generate.pojo -->
+		<!-- 
+		<property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://192.168.170.20:1433/PowerDesk</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="hibernate.connection.password">powerlong</property>
+ 		-->
+ 		<!-- 
+		<property name="hibernate.connection.driver_class">org.h2.Driver</property>
+		<property name="hibernate.connection.url">jdbc:h2:file:~/.h2/tms;AUTO_SERVER=TRUE</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="hibernate.connection.password"></property>
+		-->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tms</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<mapping class="com.hhz.tms.entity.IdEntity" />
+		<!--  -->
+		<mapping class="com.hhz.tms.entity.sys.Permission" />
+		<mapping class="com.hhz.tms.entity.sys.Resource" />
+		<mapping class="com.hhz.tms.entity.sys.Role" />
+		<mapping class="com.hhz.tms.entity.sys.Menu" />
+		<mapping class="com.hhz.tms.entity.sys.User" />
+		<mapping class="com.hhz.tms.entity.sys.Dept" />
+		<mapping class="com.hhz.tms.entity.sys.User" />
+		
+		<mapping class="com.hhz.tms.entity.Task" />
+		
+		<mapping class="com.hhz.tms.entity.app.DictType" />
+		<mapping class="com.hhz.tms.entity.app.DictData" />
+		
+	</session-factory>
+</hibernate-configuration>
