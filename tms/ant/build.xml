@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<project default="jar-tms" basedir=".">
+	<property environment="osenv" />
+	<property file="build.properties" />
+	<tstamp>
+		<format property="TODAY_CN" pattern="yy-MM-dd" locale="zh" />
+	</tstamp>
+	<!-- make some jar -->
+	<target name="jar-website" description="update jar files">
+		<echo>更新相关jar包</echo>
+		<echo>delete jar libs</echo>
+		<mkdir dir="${webapp.tms.lib}"/>
+		<delete>
+		    <fileset dir="${webapp.tms.lib}">
+				<include name="**/tms-admin-service*" />
+		    	<include name="**/tms-domain*" />
+				<include name="**/tms-utils*" />
+			</fileset>
+		</delete>
+		<jar destfile="${webapp.tms.lib}/tms-admin-service.jar" basedir="${build.tms-admin-service}target/classes">
+			<exclude name="**/*.svn" />
+		</jar>
+		<jar destfile="${webapp.tms.lib}/tms-domain.jar" basedir="${build.tms-domain}target/classes">
+			<exclude name="**/*.svn" />
+		</jar>
+		<jar destfile="${webapp.tms.lib}/tms-utils.jar" basedir="${build.tms-utils}target/classes">
+			<exclude name="**/*.svn" />
+		</jar>
+	</target>
+
+</project>

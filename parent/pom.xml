@@ -41,12 +41,19 @@
 			<artifactId>tms-3rd</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>pom</type>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- TEST begin -->
@@ -178,7 +185,7 @@
 						<include>**/*Test.java</include>
 					</includes>
 					<argLine>-Xmx256M</argLine>
-					<skipTests>false</skipTests>
+					<skipTests>true</skipTests>
 				</configuration>
 				<dependencies>
 					<dependency>
