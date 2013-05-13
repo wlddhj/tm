@@ -1,11 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.hhz</groupId>
-  <artifactId>tms-3rd</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hhz</groupId>
+	<artifactId>tms-3rd</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
 		<!-- 主要依赖库的版本定义 -->
 		<springside.version>4.1.0-SNAPSHOT</springside.version>
 		<spring.version>3.2.0.RELEASE</spring.version>
@@ -27,8 +28,8 @@
 		<jdk.version>1.7</jdk.version>
 
 	</properties>
-	
-  <repositories>
+
+	<repositories>
 		<!-- 如有Nexus私服, 取消注释并指向正确的服务器地址. <repository> <id>nexus</id> <name>Team 
 			Nexus Repository</name> <url>http://localhost:8081/nexus/content/groups/public</url> 
 			</repository> -->
@@ -41,8 +42,8 @@
 			</snapshots>
 		</repository>
 	</repositories>
-  
-  <dependencies>
+
+	<dependencies>
 		<!-- SPRINGSIDE -->
 		<dependency>
 			<groupId>org.springside</groupId>
@@ -131,7 +132,15 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		<!-- dbcp connection pool -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
@@ -318,7 +327,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<plugins>
 			<plugin>
