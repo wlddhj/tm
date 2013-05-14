@@ -17,6 +17,7 @@ import com.hhz.tms.admin.service.sys.UserService;
 import com.hhz.tms.entity.sys.User;
 
 /**
+ * user相关api
  * @author huangjian
  * 
  */
