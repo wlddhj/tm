@@ -15,7 +15,7 @@
 <link href="${ctx}/static/bootstrap/2.2.2/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 <link href="${ctx}/static/jquery-validation/1.10.0/validate.css" type="text/css" rel="stylesheet" />
 <link href="${ctx}/static/styles/default.css" type="text/css" rel="stylesheet" />
-<script src="${ctx}/static/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="${ctx}/static/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/jquery-validation/1.10.0/jquery.validate.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/jquery-validation/1.10.0/messages_bs_zh.js" type="text/javascript"></script>
 
