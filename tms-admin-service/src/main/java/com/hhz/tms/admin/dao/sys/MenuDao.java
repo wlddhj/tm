@@ -5,9 +5,9 @@ package com.hhz.tms.admin.dao.sys;
 
 import java.util.List;
 
-import com.hhz.tms.dao.BaseDao;
 import com.hhz.tms.entity.sys.Menu;
 import com.hhz.tms.entity.sys.Resource;
+import com.hhz.tms.util.dao.BaseDao;
 
 /**
  * 菜单dao

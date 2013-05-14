@@ -1,4 +1,4 @@
-package com.hhz.tms.service;
+package com.hhz.tms.util.service;
 
 /**
  * Service层公用的Exception.

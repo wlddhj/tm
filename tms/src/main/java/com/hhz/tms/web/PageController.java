@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springside.modules.web.Servlets;
 
 import com.hhz.tms.entity.IdEntity;
-import com.hhz.tms.service.BaseService;
 import com.hhz.tms.util.JsonUtil;
 import com.hhz.tms.util.WebUtil;
+import com.hhz.tms.util.service.BaseService;
 
 /**
  * @author huangjian

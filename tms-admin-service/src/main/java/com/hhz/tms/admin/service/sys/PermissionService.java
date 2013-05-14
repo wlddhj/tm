@@ -18,12 +18,12 @@ import com.hhz.tms.admin.dao.sys.MenuDao;
 import com.hhz.tms.admin.dao.sys.PermissionDao;
 import com.hhz.tms.admin.dao.sys.ResourceDao;
 import com.hhz.tms.admin.dao.sys.RoleDao;
-import com.hhz.tms.dao.BaseDao;
 import com.hhz.tms.entity.sys.Menu;
 import com.hhz.tms.entity.sys.Permission;
 import com.hhz.tms.entity.sys.Resource;
 import com.hhz.tms.entity.sys.Role;
-import com.hhz.tms.service.BaseService;
+import com.hhz.tms.util.dao.BaseDao;
+import com.hhz.tms.util.service.BaseService;
 
 /**
  * @author huangjian

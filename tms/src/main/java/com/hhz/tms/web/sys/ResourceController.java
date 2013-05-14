@@ -19,12 +19,12 @@ import com.hhz.tms.admin.service.sys.PermissionService;
 import com.hhz.tms.admin.service.sys.ResourceService;
 import com.hhz.tms.entity.sys.Permission;
 import com.hhz.tms.entity.sys.Resource;
-import com.hhz.tms.service.BaseService;
 import com.hhz.tms.util.Constants;
 import com.hhz.tms.util.EasyTreeNode;
 import com.hhz.tms.util.EasyTreeUtil;
 import com.hhz.tms.util.JsonUtil;
 import com.hhz.tms.util.RenderUtil;
+import com.hhz.tms.util.service.BaseService;
 import com.hhz.tms.web.SingleCrudControll;
 
 /**

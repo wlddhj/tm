@@ -5,8 +5,8 @@ package com.hhz.tms.admin.dao.app;
 
 import org.springframework.data.jpa.repository.Query;
 
-import com.hhz.tms.dao.BaseDao;
 import com.hhz.tms.entity.app.DictType;
+import com.hhz.tms.util.dao.BaseDao;
 
 /**
  * @author huangjian

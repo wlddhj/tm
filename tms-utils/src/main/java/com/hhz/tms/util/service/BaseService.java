@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hhz.tms.service;
+package com.hhz.tms.util.service;
 
 import java.util.List;
 import java.util.Map;
@@ -11,9 +11,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hhz.tms.dao.BaseDao;
 import com.hhz.tms.entity.IdEntity;
 import com.hhz.tms.util.WebUtil;
+import com.hhz.tms.util.dao.BaseDao;
 
 /**
  * @author huangjian

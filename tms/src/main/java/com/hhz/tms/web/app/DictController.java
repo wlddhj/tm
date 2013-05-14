@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.hhz.tms.admin.service.app.DictService;
 import com.hhz.tms.entity.app.DictData;
 import com.hhz.tms.entity.app.DictType;
-import com.hhz.tms.service.BaseService;
 import com.hhz.tms.util.JsonUtil;
 import com.hhz.tms.util.RenderUtil;
+import com.hhz.tms.util.service.BaseService;
 import com.hhz.tms.web.PageController;
 
 /**

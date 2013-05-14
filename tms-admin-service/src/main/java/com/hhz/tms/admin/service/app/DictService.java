@@ -12,10 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.hhz.tms.admin.dao.app.DictDataDao;
 import com.hhz.tms.admin.dao.app.DictTypeDao;
-import com.hhz.tms.dao.BaseDao;
 import com.hhz.tms.entity.app.DictData;
 import com.hhz.tms.entity.app.DictType;
-import com.hhz.tms.service.BaseService;
+import com.hhz.tms.util.dao.BaseDao;
+import com.hhz.tms.util.service.BaseService;
 
 /**
  * 数据字典
