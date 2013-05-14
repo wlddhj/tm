@@ -16,10 +16,6 @@ import com.hhz.tms.dao.TaskDao;
 import com.hhz.tms.entity.Task;
 import com.hhz.tms.util.WebUtil;
 
-import org.springside.modules.persistence.DynamicSpecifications;
-import org.springside.modules.persistence.SearchFilter;
-import org.springside.modules.persistence.SearchFilter.Operator;
-
 //Spring Bean的标识.
 @Component
 // 默认将类中的所有public函数纳入事务管理.
@@ -67,16 +63,6 @@ public class TaskService {
 		}
 
 		return new PageRequest(pageNumber - 1, pagzSize, sort);
-	}
-
-	/**
-	 * 创建动态查询条件组合.
-	 */
-	private Specification<Task> buildSpecification(Long userId, Map<String, Object> searchParams) {
-		Map<String, SearchFilter> filters = SearchFilter.parse(searchParams);
-		filters.put("user.id", new SearchFilter("user.id", Operator.EQ, userId));
-		Specification<Task> spec = DynamicSpecifications.bySearchFilter(filters.values(), Task.class);
-		return spec;
 	}
 
 	@Autowired

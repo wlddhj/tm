@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hhz.tms.service.account;
+package com.hhz.tms.admin.service;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;

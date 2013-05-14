@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.hhz.tms.service;
+package com.hhz.tms.admin.service;
 
 import org.apache.shiro.config.Ini;
 import org.apache.shiro.config.Ini.Section;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.hhz.tms.service.account.ShiroService;
+import com.hhz.tms.admin.service.ShiroService;
 
 /**
  * 初始化资源控制

@@ -16,9 +16,9 @@
 	</bean>
 
 	<!-- 項目自定义的Realm, 所有userService依赖的dao都需要用depends-on声明 -->
-	<bean id="shiroDbRealm" class="com.hhz.tms.service.account.ShiroDbRealm" depends-on="userDao,taskDao,menuDao,deptDao">
+	<bean id="shiroDbRealm" class="com.hhz.tms.admin.service.ShiroDbRealm" depends-on="userDao,taskDao,menuDao,deptDao">
 	</bean>
-	<bean id="chainDefinitionSectionMetaSource" class="com.hhz.tms.service.ChainDefinitionSectionMetaSource" depends-on="resourceDao,permissionDao,menuDao">
+	<bean id="chainDefinitionSectionMetaSource" class="com.hhz.tms.admin.service.ChainDefinitionSectionMetaSource" depends-on="resourceDao,permissionDao,menuDao">
    		<property name="filterChainDefinitions">
 	        <value>
 	            /api/** = anon
