@@ -24,6 +24,7 @@ import com.hhz.tms.util.WebUtil;
 import com.hhz.tms.util.service.BaseService;
 
 /**
+ * 单表翻页基类
  * @author huangjian
  *
  */
