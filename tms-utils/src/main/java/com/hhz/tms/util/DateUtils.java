@@ -14,7 +14,6 @@ public class DateUtils {
 
 	private static final Log logger = LogFactory.getLog(DateUtils.class);
 
-	// 087584-foss-lijun
 	public static final String DATE_SHORT_FORMAT = "yyyyMMdd";
 	public static final String DATE_CH_FORMAT = "yyyy年MM月dd日";
 
@@ -74,7 +73,7 @@ public class DateUtils {
 	/**
 	 * 时间拼接 将日期和实现拼接 ymd 如2012-05-15 hm 如0812
 	 * 
-	 * @author 096598-foss-zhongyubing
+	 * @author yubingzhong
 	 * @date 2012-11-22 下午4:48:43
 	 */
 	public static Date concat(String ymd, String hm) {
@@ -98,7 +97,7 @@ public class DateUtils {
 	/**
 	 * 根据传入的日期返回年月日的6位字符串，例：20101203
 	 * 
-	 * @author 087584-foss-lijun
+	 * @author yubingzhong
 	 * @date 2012-11-28 下午8:35:55
 	 */
 	public static String getDay(Date date) {
@@ -108,7 +107,7 @@ public class DateUtils {
 	/**
 	 * 根据传入的日期返回中文年月日字符串，例：2010年12月03日
 	 * 
-	 * @author 087584-foss-lijun
+	 * @author yubingzhong
 	 * @date 2012-11-28 下午8:35:55
 	 */
 	public static String getChDate(Date date) {
@@ -120,7 +119,7 @@ public class DateUtils {
 	 * 
 	 * 例：传入2012-12-03 23:21:24
 	 * 
-	 * @author 087584-foss-lijun
+	 * @author yubingzhong
 	 * @date 2012-11-29 上午11:29:31
 	 */
 	public static Date strToDate(String dateStr) {
