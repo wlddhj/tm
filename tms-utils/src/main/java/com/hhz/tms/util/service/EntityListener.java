@@ -22,7 +22,8 @@ public class EntityListener implements InitializingBean {
 		Date now = new Date();
 		try {
 			// 创建时间
-			Date createdDate = (Date) PropertyUtils.getProperty(entity, CREATEDDATE);
+			Date createdDate = (Date) PropertyUtils.getProperty(entity,
+					CREATEDDATE);
 			if (createdDate == null) {
 				PropertyUtils.setProperty(entity, CREATEDDATE, now);
 			}
@@ -51,7 +52,6 @@ public class EntityListener implements InitializingBean {
 		}
 	}
 
-	@Override
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
 

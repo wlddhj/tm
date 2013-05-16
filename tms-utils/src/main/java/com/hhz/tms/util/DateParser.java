@@ -22,7 +22,7 @@ import org.apache.commons.validator.GenericValidator;
  * 
  * @author huangj 2009-12-16
  */
-public class DateParser {
+class DateParser {
 	
 	private static final Calendar calendar = Calendar.getInstance();
 	
