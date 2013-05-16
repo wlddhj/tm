@@ -1,5 +1,11 @@
 package com.hhz.tms.entity.wms;
 
+/**
+ * 简单客户信息
+ * 
+ * @author Administrator
+ * 
+ */
 public class WmsCustomerEntity extends BaseInfoEntity {
 	/**
 	 * 编码

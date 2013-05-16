@@ -2,6 +2,13 @@ package com.hhz.tms.entity.wms;
 
 import java.math.BigDecimal;
 
+/**
+ * 
+ * 发票信息
+ * 
+ * @author Administrator
+ * 
+ */
 public class WmsInvoiceEntity extends BaseInfoEntity {
 	/**
 	 * 发票号

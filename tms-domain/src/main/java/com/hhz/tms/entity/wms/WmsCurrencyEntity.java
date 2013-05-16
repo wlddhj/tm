@@ -2,6 +2,12 @@ package com.hhz.tms.entity.wms;
 
 import com.hhz.tms.entity.IdEntity;
 
+/**
+ * 币制
+ * 
+ * @author Administrator
+ * 
+ */
 public class WmsCurrencyEntity extends IdEntity {
 
 	/**

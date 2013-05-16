@@ -1,5 +1,12 @@
 package com.hhz.tms.entity.wms;
 
+/**
+ * 
+ * 基础产品信息
+ * 
+ * @author Administrator
+ * 
+ */
 public class WmsProductTypeEntity extends BaseInfoEntity {
 
 	/**
