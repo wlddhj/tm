@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  * @author Administrator
  * 
  */
-public class WmsInvoice extends BaseInfoEntity {
+public class Invoice extends BaseInfoEntity {
 	/**
 	 * 发票号
 	 */
@@ -25,7 +25,7 @@ public class WmsInvoice extends BaseInfoEntity {
 	/**
 	 * 币制
 	 */
-	public WmsCurrency currencyEntity;
+	public Currency currencyEntity;
 	/**
 	 * 开票人
 	 */
@@ -59,11 +59,11 @@ public class WmsInvoice extends BaseInfoEntity {
 		this.invoiceAmount = invoiceAmount;
 	}
 
-	public WmsCurrency getCurrencyEntity() {
+	public Currency getCurrencyEntity() {
 		return currencyEntity;
 	}
 
-	public void setCurrencyEntity(WmsCurrency currencyEntity) {
+	public void setCurrencyEntity(Currency currencyEntity) {
 		this.currencyEntity = currencyEntity;
 	}
 

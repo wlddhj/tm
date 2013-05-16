@@ -7,7 +7,7 @@ package com.hhz.tms.entity.wms;
  * @author Administrator
  * 
  */
-public class WmsBasicProduct extends BaseInfoEntity {
+public class BasicProduct extends BaseInfoEntity {
 
 	/**
 	 * 序号
@@ -16,7 +16,7 @@ public class WmsBasicProduct extends BaseInfoEntity {
 	/**
 	 * 产品信息
 	 */
-	public WmsBasicProduct basicProductEntiy;
+	public BasicProduct basicProductEntiy;
 	/**
 	 * 中文名
 	 */
@@ -28,11 +28,11 @@ public class WmsBasicProduct extends BaseInfoEntity {
 	/**
 	 * 产品类型
 	 */
-	public WmsProductType productTypeEntity;
+	public ProductType productTypeEntity;
 	/**
 	 * 所属客户
 	 */
-	public WmsCustomer customerEntity;
+	public Customer customerEntity;
 
 	public String getSn() {
 		return sn;
@@ -42,11 +42,11 @@ public class WmsBasicProduct extends BaseInfoEntity {
 		this.sn = sn;
 	}
 
-	public WmsBasicProduct getBasicProductEntiy() {
+	public BasicProduct getBasicProductEntiy() {
 		return basicProductEntiy;
 	}
 
-	public void setBasicProductEntiy(WmsBasicProduct basicProductEntiy) {
+	public void setBasicProductEntiy(BasicProduct basicProductEntiy) {
 		this.basicProductEntiy = basicProductEntiy;
 	}
 
@@ -66,19 +66,19 @@ public class WmsBasicProduct extends BaseInfoEntity {
 		this.nameEn = nameEn;
 	}
 
-	public WmsProductType getProductTypeEntity() {
+	public ProductType getProductTypeEntity() {
 		return productTypeEntity;
 	}
 
-	public void setProductTypeEntity(WmsProductType productTypeEntity) {
+	public void setProductTypeEntity(ProductType productTypeEntity) {
 		this.productTypeEntity = productTypeEntity;
 	}
 
-	public WmsCustomer getCustomerEntity() {
+	public Customer getCustomerEntity() {
 		return customerEntity;
 	}
 
-	public void setCustomerEntity(WmsCustomer customerEntity) {
+	public void setCustomerEntity(Customer customerEntity) {
 		this.customerEntity = customerEntity;
 	}
 

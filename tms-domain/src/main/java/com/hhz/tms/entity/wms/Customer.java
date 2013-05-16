@@ -6,7 +6,7 @@ package com.hhz.tms.entity.wms;
  * @author Administrator
  * 
  */
-public class WmsCustomer extends BaseInfoEntity {
+public class Customer extends BaseInfoEntity {
 	/**
 	 * 编码
 	 */
