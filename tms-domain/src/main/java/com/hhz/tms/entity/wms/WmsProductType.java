@@ -7,7 +7,7 @@ package com.hhz.tms.entity.wms;
  * @author Administrator
  * 
  */
-public class WmsProductTypeEntity extends BaseInfoEntity {
+public class WmsProductType extends BaseInfoEntity {
 
 	/**
 	 * 类型名

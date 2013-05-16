@@ -8,7 +8,7 @@ import com.hhz.tms.entity.IdEntity;
  * @author Administrator
  * 
  */
-public class WmsCurrencyEntity extends IdEntity {
+public class WmsCurrency extends IdEntity {
 
 	/**
 	 * 中文名称

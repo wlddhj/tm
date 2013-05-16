@@ -8,7 +8,7 @@ import java.math.BigDecimal;
  * @author Administrator
  * 
  */
-public class WmsProductEntity extends BaseInfoEntity {
+public class WmsProduct extends BaseInfoEntity {
 
 	/**
 	 * 序号
@@ -21,11 +21,11 @@ public class WmsProductEntity extends BaseInfoEntity {
 	/**
 	 * 产品信息
 	 */
-	public WmsBasicProductEntiy basicProductEntiy;
+	public WmsBasicProduct basicProductEntiy;
 	/**
 	 * 发票
 	 */
-	public WmsInvoiceEntity invoiceEntity;
+	public WmsInvoice invoiceEntity;
 	/**
 	 * 箱单号
 	 */
@@ -33,11 +33,11 @@ public class WmsProductEntity extends BaseInfoEntity {
 	/**
 	 * 产品类型
 	 */
-	public WmsProductTypeEntity productTypeEntity;
+	public WmsProductType productTypeEntity;
 	/**
 	 * 币制
 	 */
-	public WmsCurrencyEntity currencyEntity;
+	public WmsCurrency currencyEntity;
 	/**
 	 * 单价
 	 */
