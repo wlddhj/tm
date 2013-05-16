@@ -1,6 +1,7 @@
 package com.hhz.tms.entity.wms;
 
 /**
+ * 
  * 基础产品维护信息
  * 
  * @author Administrator
