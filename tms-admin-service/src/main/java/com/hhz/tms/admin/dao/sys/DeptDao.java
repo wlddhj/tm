@@ -5,8 +5,8 @@ package com.hhz.tms.admin.dao.sys;
 
 import java.util.List;
 
+import com.hhz.tms.common.dao.BaseDao;
 import com.hhz.tms.entity.sys.Dept;
-import com.hhz.tms.util.dao.BaseDao;
 
 /**
  * @author huangjian
